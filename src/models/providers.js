@@ -2,7 +2,7 @@
 const Mongoose = require('mongoose');
 const Connection = require('./connection');
 
-// Create providers schema based on the schema of the remote database
+// Create providers schema based on the remote database schema
 const specialitySchema = {
     _id: { type: Mongoose.Schema.Types.ObjectId },
     name: { type: String },
