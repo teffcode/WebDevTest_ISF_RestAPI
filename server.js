@@ -15,7 +15,6 @@ const Hapi = require('hapi');
 
 // Handlers of app
 const Providers = require('./src/providers');
-const Specialties = require('./src/specialties');
 
 // Create a server with a host and port
 const Server = new Hapi.Server();
@@ -32,6 +31,13 @@ Server.route({
         console.log('GET /');
         return response('Server Running').code(200);
     }
+});
+
+// Providers CRUD
+Server.route({
+    method: 'POST',
+    path:'/provider',
+    handler: Providers.Create
 });
 
 // Start the server

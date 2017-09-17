@@ -1,6 +1,6 @@
 // Import Models
 const Providers = require('./providers');
-const Specialties = require('./specialities');
+const Specialties = require('./specialties');
 
 module.exports = {
     Providers,
