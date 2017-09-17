@@ -78,6 +78,12 @@ Server.route({
     handler: Specialties.Remove
 });
 
+Server.route({
+    method: 'PUT',
+    path: '/specialties/{specialtiesId}',
+    handler: Specialties.Update
+})
+
 // Start the server
 Server.start((err) => {
     if (err) {
