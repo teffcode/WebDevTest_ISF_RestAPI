@@ -66,6 +66,12 @@ Server.route({
     handler: Specialties.Create
 });
 
+Server.route({
+    method: 'GET',
+    path:'/specialties',
+    handler: Specialties.Read
+});
+
 // Start the server
 Server.start((err) => {
     if (err) {
