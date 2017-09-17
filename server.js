@@ -40,6 +40,12 @@ Server.route({
     handler: Providers.Create
 });
 
+Server.route({
+    method: 'GET',
+    path:'/provider',
+    handler: Providers.Read
+});
+
 // Start the server
 Server.start((err) => {
     if (err) {
