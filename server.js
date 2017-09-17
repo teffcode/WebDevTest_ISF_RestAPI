@@ -72,6 +72,12 @@ Server.route({
     handler: Specialties.Read
 });
 
+Server.route({
+    method: 'DELETE',
+    path: '/specialties/{specialtiesId}',
+    handler: Specialties.Remove
+});
+
 // Start the server
 Server.start((err) => {
     if (err) {
