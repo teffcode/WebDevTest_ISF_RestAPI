@@ -52,6 +52,12 @@ Server.route({
     handler: Providers.Remove
 });
 
+Server.route({
+    method: 'PUT',
+    path: '/provider/{providerId}',
+    handler: Providers.Update
+})
+
 // Start the server
 Server.start((err) => {
     if (err) {
