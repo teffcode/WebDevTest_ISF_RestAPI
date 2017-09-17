@@ -46,6 +46,12 @@ Server.route({
     handler: Providers.Read
 });
 
+Server.route({
+    method: 'DELETE',
+    path: '/provider/{providerId}',
+    handler: Providers.Remove
+});
+
 // Start the server
 Server.start((err) => {
     if (err) {
