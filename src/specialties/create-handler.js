@@ -22,7 +22,8 @@ const create = function(request, response) {
             console.log('Error creating a specialties: ', err.message);
             return response({
                 type: 'Create',
-                message: 'Error creating the specialties'
+                message: 'Error creating the specialties',
+                err: err.message
             }).code(500);
         });
 }

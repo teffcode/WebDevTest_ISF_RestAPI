@@ -35,7 +35,8 @@ const create = function(request, response) {
             console.log('Error creating a provider: ', err.message);
             return response({
                 type: 'Create',
-                message: 'Error creating the provider'
+                message: 'Error creating the provider',
+                err: err.message
             }).code(500);
         });
 }
