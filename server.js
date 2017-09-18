@@ -72,7 +72,7 @@ Server.route({
     handler: Specialties.Create
 });
 
-// This endpoint allows us to perform a search of specialties based on: name
+// This endpoint allows us to perform a search of specialties based on: name and createdBy
 Server.route({
     method: 'GET',
     path:'/specialties',
