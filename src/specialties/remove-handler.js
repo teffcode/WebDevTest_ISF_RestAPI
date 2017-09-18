@@ -11,7 +11,7 @@ const remove = function(request, response) {
         return response({
             type: 'Delete',
             message: 'Document deleted success',
-        }).code(200)
+        }).code(200) // Standard response for successful HTTP requests
     })
     .catch((err) => {
         console.log('Error deleting a specialties: ', err.message);
@@ -19,7 +19,7 @@ const remove = function(request, response) {
             type: 'Delete',
             message: 'Error deleting document',
             err: err.message
-        }).code(500);
+        }).code(500); // Internal Server Error
     });
 }
 

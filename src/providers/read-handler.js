@@ -8,6 +8,7 @@ const Models = require('../models');
     * assignedTo
     * Status
 */
+
 const read = function(request, response) {
     console.log('Object to read: ', request.query);
     const limitQuery = parseInt(request.query.limit) || 0
@@ -27,7 +28,7 @@ const read = function(request, response) {
                 type: 'Read',
                 message: 'Read provider success',
                 data
-            }).code(200);
+            }).code(200); // Standard response for successful HTTP requests
         })
         .catch((err) => {
             console.log('Error finding a provider: ', err.message);
@@ -35,7 +36,7 @@ const read = function(request, response) {
                 type: 'Read',
                 message: 'Error finding the provider',
                 err: err.message
-            }).code(500);
+            }).code(500); // Internal Server Error
         });
 }
 

@@ -17,7 +17,7 @@ const update = function(request, response) {
         return response({
             type: 'Update',
             message: 'Specialties updated success',
-        }).code(200);
+        }).code(200); // Standard response for successful HTTP requests
     })
     .catch((err) => {
         console.log('Error updating document: ', err.message);
@@ -25,7 +25,7 @@ const update = function(request, response) {
             type: 'Update',
             message: 'Error updating document',
             err: err.message
-        }).code(500);
+        }).code(500); // Internal Server Error
     });
 };
 

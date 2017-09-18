@@ -21,7 +21,7 @@ const read = function(request, response) {
                 type: 'Read',
                 message: 'Read specialties success',
                 data
-            }).code(200);
+            }).code(200); // Standard response for successful HTTP requests
         })
         .catch((err) => {
             console.log('Error finding a specialties: ', err.message);

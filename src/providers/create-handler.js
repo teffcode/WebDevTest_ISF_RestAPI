@@ -2,6 +2,7 @@
 const Models = require('../models');
 
 const create = function(request, response) {
+    // This is the object of construction of the document in the DB
     const providerToCreate = {
         firstName: request.payload.firstName,
         lastName: request.payload.lastName,
@@ -29,7 +30,7 @@ const create = function(request, response) {
                 type: 'Create',
                 message: 'Provider created success',
                 data
-            }).code(201);
+            }).code(201); // Created: The request has been fulfilled, resulting in the creation of a new resource
         })
         .catch((err) => {
             console.log('Error creating a provider: ', err.message);
@@ -37,7 +38,7 @@ const create = function(request, response) {
                 type: 'Create',
                 message: 'Error creating the provider',
                 err: err.message
-            }).code(500);
+            }).code(500); // Internal Server Error
         });
 }
 
