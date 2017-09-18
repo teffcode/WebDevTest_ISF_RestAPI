@@ -29,7 +29,7 @@ const read = function(request, response) {
                 type: 'Read',
                 message: 'Error finding the specialties',
                 err: err.message
-            }).code(500);
+            }).code(500); // Internal Server Error
         });
 }
 
